@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ce-net</title>
+<meta name="description" content="What we build for companies: digital twins that work for the people in them, the open ce-net infrastructure with support, and engineering results that come with a certificate. Every claim links to its proof.">
+<meta property="og:title" content="Work with ce-net"><meta property="og:description" content="Company digital twins, open infrastructure with support, and engineering verification. Every claim links to its proof.">
+<meta property="og:type" content="website"><meta property="og:image" content="https://design.ce-net.com/v1/logo/ce-net-og.png">
+<meta name="theme-color" content="#070807">
+<link rel="icon" href="https://design.ce-net.com/v1/logo/ce-net-favicon-dark.svg" type="image/svg+xml">
+<script>try{if(localStorage.getItem("ce-theme")==="light")document.documentElement.dataset.theme="light"}catch(e){}</script>
+<link rel="stylesheet" href="tokens.css"><link rel="stylesheet" href="components.css">
+<style>
+.wrap{max-width:var(--max);margin:0 auto;padding:var(--s-6) var(--m) var(--s-8)}
+.top{display:flex;align-items:center;justify-content:space-between;gap:var(--s-3);margin-bottom:var(--s-7)}
+.brand{font:400 13px var(--disp);letter-spacing:.08em;text-transform:uppercase;color:var(--ink);text-decoration:none}
+.topr{display:flex;gap:var(--s-2);align-items:center}
+.tog,.navl{background:var(--panel);border:1px solid var(--line);border-radius:var(--r-sm);color:var(--ink-2);font:500 10.5px var(--mono);
+  letter-spacing:.08em;text-transform:uppercase;padding:8px 10px;cursor:pointer;min-height:36px;text-decoration:none;display:inline-flex;align-items:center}
+.tog:hover,.navl:hover{color:var(--ink)}
+.lede{max-width:42em;color:var(--ink-2);margin:0 0 var(--s-4)}
+h2{font:500 var(--t-2xs) var(--mono);letter-spacing:var(--track-crumb);text-transform:uppercase;color:var(--ink-2);margin:var(--s-7) 0 var(--s-3)}
+.grid{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:var(--s-2)}
+.card{padding:var(--s-4) var(--s-4) var(--s-3);display:flex;flex-direction:column;gap:var(--s-2);height:100%}
+.card h3{margin:0;font:600 var(--t-lg)/1.3 var(--sans);color:var(--ink)}
+.card p{margin:0;color:var(--ink-2);font-size:var(--t-md)}
+.card ul{margin:0;padding-left:1.1em;color:var(--ink-2);font-size:var(--t-md)}
+.card ul li{margin:2px 0}
+.card .note{font:400 11px/1.5 var(--mono);color:var(--ink-3);margin-top:auto;padding-top:var(--s-2);border-top:1px solid var(--line)}
+.go{font:500 10.5px var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--acc);text-decoration:none;
+  padding:10px 12px 2px 0;min-height:44px;display:inline-flex;align-items:center}
+.go:hover{color:var(--acc-hi)}
+.links{display:flex;flex-wrap:wrap}
+.rows{padding:var(--s-2) var(--s-4)}
+.row{display:flex;justify-content:space-between;gap:var(--s-4);padding:10px 0;border-bottom:1px solid var(--line)}
+.row:last-child{border-bottom:0}
+.row .k{font:500 9.5px var(--sans);letter-spacing:.12em;text-transform:uppercase;color:var(--ink-2);flex:0 0 auto}
+.row .v{font:400 12px/1.5 var(--mono);color:var(--ink);text-align:right;font-variant-numeric:tabular-nums}
+.steps{counter-reset:s;list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:var(--s-2)}
+.steps li{counter-increment:s}
+.steps .card h3::before{content:counter(s,decimal-leading-zero) "  ";font:500 12px var(--mono);color:var(--acc)}
+.contact{padding:var(--s-5) var(--s-4);display:flex;flex-wrap:wrap;gap:var(--s-4);align-items:center;justify-content:space-between}
+.contact p{margin:0;color:var(--ink-2);max-width:36em}
+.foot{margin-top:var(--s-7);font:400 11px var(--mono);color:var(--ink-3);display:flex;flex-wrap:wrap;gap:var(--s-4)}
+.foot a{color:var(--ink-2)}
+@media (max-width:600px){.wrap{padding:var(--s-4) 16px var(--s-7)}.grid,.steps{grid-template-columns:1fr}.top{margin-bottom:var(--s-5)}
+  .row{flex-direction:column;gap:2px}.row .v{text-align:left}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="top"><a class="brand" href="./">ce-net</a>
+<div class="topr"><button class="tog" type="button" id="tog" aria-label="Switch between dark and light">Light</button></div></header>
+<div class="crumb">ce-net / <b>Home</b></div>
+<h1 class="display lg">An open network of cells.</h1>
+<p class="lede">ce-net is an open protocol and runtime where every service is a cell with its own key, so code can run safely on hardware you choose and every claim can be checked. Start with the proof, then the parts you can use today.</p>
+<ul class="grid">
+<li><article class="glass ticks card"><div class="label"><i class="g"></i>Work with us</div><h3>Twins, infrastructure, verification</h3><p>What we build for companies, with the proof for each claim.</p><div class="links"><a class="go" href="work-with-us/">Work with us</a></div></article></li>
+<li><article class="glass card"><div class="label"><i class="g"></i>Demos</div><h3>Seventeen demos</h3><p>Each its own repo with recorded proof; nine re-run from a fresh clone.</p><div class="links"><a class="go" href="demos/">All demos</a></div></article></li>
+<li><article class="glass card"><div class="label"><i class="g"></i>Build</div><h3>Protocol and starter packs</h3><p>The capability token and CAL (Apache-2.0), and tested starter packs (MIT).</p><div class="links"><a class="go" href="https://github.com/ce-net/ce-net-proto">Protocol</a><a class="go" href="https://github.com/ce-net/starters">Starters</a></div></article></li>
+</ul>
+<footer class="foot"><span>CE · Leif Adamec Rydenfalk · © 2026</span><a href="https://github.com/ce-net">GitHub</a><a href="https://ce-net.com/">ce-net.com</a></footer>
+</div>
+<script>
+(function(){var b=document.getElementById("tog"),r=document.documentElement;
+function set(){b.textContent=r.dataset.theme==="light"?"Dark":"Light"}set();
+b.addEventListener("click",function(){var l=r.dataset.theme!=="light";if(l)r.dataset.theme="light";else delete r.dataset.theme;
+try{localStorage.setItem("ce-theme",l?"light":"dark")}catch(e){}set()})})();
+</script>
+</body></html>

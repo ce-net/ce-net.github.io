@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Work with ce-net</title>
+<meta name="description" content="What we build for companies: digital twins that work for the people in them, the open ce-net infrastructure with support, and engineering results that come with a certificate. Every claim links to its proof.">
+<meta property="og:title" content="Work with ce-net"><meta property="og:description" content="Company digital twins, open infrastructure with support, and engineering verification. Every claim links to its proof.">
+<meta property="og:type" content="website"><meta property="og:image" content="https://design.ce-net.com/v1/logo/ce-net-og.png">
+<meta name="theme-color" content="#070807">
+<link rel="icon" href="https://design.ce-net.com/v1/logo/ce-net-favicon-dark.svg" type="image/svg+xml">
+<script>try{if(localStorage.getItem("ce-theme")==="light")document.documentElement.dataset.theme="light"}catch(e){}</script>
+<link rel="stylesheet" href="../tokens.css"><link rel="stylesheet" href="../components.css">
+<style>
+.wrap{max-width:var(--max);margin:0 auto;padding:var(--s-6) var(--m) var(--s-8)}
+.top{display:flex;align-items:center;justify-content:space-between;gap:var(--s-3);margin-bottom:var(--s-7)}
+.brand{font:400 13px var(--disp);letter-spacing:.08em;text-transform:uppercase;color:var(--ink);text-decoration:none}
+.topr{display:flex;gap:var(--s-2);align-items:center}
+.tog,.navl{background:var(--panel);border:1px solid var(--line);border-radius:var(--r-sm);color:var(--ink-2);font:500 10.5px var(--mono);
+  letter-spacing:.08em;text-transform:uppercase;padding:8px 10px;cursor:pointer;min-height:36px;text-decoration:none;display:inline-flex;align-items:center}
+.tog:hover,.navl:hover{color:var(--ink)}
+.lede{max-width:42em;color:var(--ink-2);margin:0 0 var(--s-4)}
+h2{font:500 var(--t-2xs) var(--mono);letter-spacing:var(--track-crumb);text-transform:uppercase;color:var(--ink-2);margin:var(--s-7) 0 var(--s-3)}
+.grid{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:var(--s-2)}
+.card{padding:var(--s-4) var(--s-4) var(--s-3);display:flex;flex-direction:column;gap:var(--s-2);height:100%}
+.card h3{margin:0;font:600 var(--t-lg)/1.3 var(--sans);color:var(--ink)}
+.card p{margin:0;color:var(--ink-2);font-size:var(--t-md)}
+.card ul{margin:0;padding-left:1.1em;color:var(--ink-2);font-size:var(--t-md)}
+.card ul li{margin:2px 0}
+.card .note{font:400 11px/1.5 var(--mono);color:var(--ink-3);margin-top:auto;padding-top:var(--s-2);border-top:1px solid var(--line)}
+.go{font:500 10.5px var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--acc);text-decoration:none;
+  padding:10px 12px 2px 0;min-height:44px;display:inline-flex;align-items:center}
+.go:hover{color:var(--acc-hi)}
+.links{display:flex;flex-wrap:wrap}
+.rows{padding:var(--s-2) var(--s-4)}
+.row{display:flex;justify-content:space-between;gap:var(--s-4);padding:10px 0;border-bottom:1px solid var(--line)}
+.row:last-child{border-bottom:0}
+.row .k{font:500 9.5px var(--sans);letter-spacing:.12em;text-transform:uppercase;color:var(--ink-2);flex:0 0 auto}
+.row .v{font:400 12px/1.5 var(--mono);color:var(--ink);text-align:right;font-variant-numeric:tabular-nums}
+.steps{counter-reset:s;list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:var(--s-2)}
+.steps li{counter-increment:s}
+.steps .card h3::before{content:counter(s,decimal-leading-zero) "  ";font:500 12px var(--mono);color:var(--acc)}
+.contact{padding:var(--s-5) var(--s-4);display:flex;flex-wrap:wrap;gap:var(--s-4);align-items:center;justify-content:space-between}
+.contact p{margin:0;color:var(--ink-2);max-width:36em}
+.foot{margin-top:var(--s-7);font:400 11px var(--mono);color:var(--ink-3);display:flex;flex-wrap:wrap;gap:var(--s-4)}
+.foot a{color:var(--ink-2)}
+@media (max-width:600px){.wrap{padding:var(--s-4) 16px var(--s-7)}.grid,.steps{grid-template-columns:1fr}.top{margin-bottom:var(--s-5)}
+  .row{flex-direction:column;gap:2px}.row .v{text-align:left}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<header class="top"><a class="brand" href="../">ce-net</a>
+<div class="topr"><a class="navl" href="https://ce-net.github.io/demos/">Demos</a>
+<button class="tog" type="button" id="tog" aria-label="Switch between dark and light">Light</button></div></header>
+
+<div class="crumb">ce-net / <b>Work with us</b></div>
+<h1 class="display lg">Work with us.</h1>
+<p class="lede">We build three things for companies, on an open network you can inspect: a digital twin of how your company works, the open infrastructure under it with someone to call when it matters, and engineering results that come with a certificate anyone can re-check. Everything on this page links to something that already runs.</p>
+
+<h2>What we offer · 3</h2>
+<ul class="grid">
+<li><article class="glass ticks card"><div class="label"><i class="g"></i>Company digital twins</div>
+<h3>A twin of your company that works for the people in it</h3>
+<p>Sites, lines, staff dispatch, contracts and renewals in one live model, with an owner view, a manager view per site and a view for each person of their own record. It shows how the work flows, not how each person is watched.</p>
+<ul>
+<li>Nothing passive about people: no keystrokes, screenshots, webcams, microphones or emotion scoring.</li>
+<li>Each person sees their own record first, and who looked at it.</li>
+<li>Owners get site, team and shift numbers; groups under five show as &ldquo;fewer than 5&rdquo;.</li>
+<li>No scores of people. A missing record becomes a question to the person, never a deduction.</li>
+<li>People can export their own work record and take it with them.</li>
+</ul>
+<div class="note">Proof: a three-station line twin that signs every event; your browser checks 320 of 320 signatures and recomputes the numbers. A working owner/manager/worker demo is shown on a call.</div>
+<div class="links"><a class="go" href="https://ce-net.github.io/demo-demo-line-twin/">Open the line twin</a><a class="go" href="https://maps.ce-net.com/">Twins on the map</a></div></article></li>
+
+<li><article class="glass card"><div class="label"><i class="g"></i>Open infrastructure + support</div>
+<h3>The open layer, and help running it</h3>
+<p>ce-net is an open protocol and runtime where every service is a cell with its own key. Capabilities can only narrow as they are handed on, and anyone can verify them offline. The protocol is Apache-2.0; the starter packs are MIT.</p>
+<ul>
+<li>Turn a program you already run into a network service with a manifest and a health check.</li>
+<li>Keys that do exactly one thing, expire, or work only on your own devices.</li>
+<li>Signed receipts for every call, checkable with one Python file.</li>
+</ul>
+<div class="note">We help you set it up on your machines, wrap your programs as cells and keep them running. Your data stays on your hardware.</div>
+<div class="links"><a class="go" href="https://github.com/ce-net/ce-net-proto">Protocol</a><a class="go" href="https://github.com/ce-net/starters">Starter packs</a><a class="go" href="https://github.com/ce-net/ce-net-capability-verify">Verifier</a></div></article></li>
+
+<li><article class="glass card"><div class="label"><i class="g"></i>Engineering verification</div>
+<h3>Engineering results you can re-check</h3>
+<p>A result is worth what you can check. Our finite element runs come with a signed certificate that binds the solver source, the input and the output, and any browser can re-run the solver and get the same hash.</p>
+<ul>
+<li>Four load cases solved on an ARM server and an x86 desktop: identical output bytes, and the same hash again in the browser.</li>
+<li>FEM tip deflection within 0.6 % of beam theory on every case.</li>
+<li>440 of 440 single-field edits to a certificate rejected.</li>
+</ul>
+<div class="note">Datum, our engineering proof language, re-checks claims like &ldquo;the bracket does not yield&rdquo; with exact arithmetic and returns proven, refuted or undetermined, with the inequality that decided it. Shown on a call; not public yet.</div>
+<div class="links"><a class="go" href="https://github.com/ce-net/demo-verified-result">Source and proof</a></div></article></li>
+</ul>
+
+<h2>Proof, not slides</h2>
+<div class="glass rows">
+<div class="row"><span class="k">Public demos</span><span class="v" id="n-all">17</span></div>
+<div class="row"><span class="k">Re-run from a fresh clone</span><span class="v" id="n-works">9 reproduce the numbers in their README</span></div>
+<div class="row"><span class="k">Code and recorded proof public</span><span class="v" id="n-partly">8, each note says what is missing</span></div>
+<div class="row"><span class="k">License</span><span class="v">Apache-2.0 demos and protocol · MIT starter packs</span></div>
+</div>
+<div class="links"><a class="go" href="https://ce-net.github.io/demos/">All demos, with what each one proves</a></div>
+
+<h2>How a first project goes</h2>
+<ol class="steps">
+<li><article class="glass card"><h3>A 30-minute call</h3><p>You tell us what you run and where work gets held up. We show the demo twin and say which of its numbers are simulated.</p></article></li>
+<li><article class="glass card"><h3>One area, scoped</h3><p>We pick one site, line or station and write down what the twin covers and what it leaves out, before any work starts.</p></article></li>
+<li><article class="glass card"><h3>It runs on your machine</h3><p>The twin runs on your hardware. A person approves every outside action, and every step is logged back to its source.</p></article></li>
+<li><article class="glass card"><h3>You keep it</h3><p>Open protocol, your data, your copy. If you stop, you keep the record and the open parts.</p></article></li>
+</ol>
+
+<h2>Contact</h2>
+<div class="glass ticks contact">
+<p>You talk to Leif Adamec Rydenfalk, the founder, directly. We are in Shenzhen and Sweden and can demonstrate on site in the Pearl River Delta.</p>
+<div class="links"><a class="btn primary" href="mailto:hello@ce-net.com?subject=Work%20with%20ce-net">Email hello@ce-net.com</a><a class="go" href="https://ce-net.com/contact/">Book a call</a></div>
+</div>
+
+<footer class="foot"><span>CE · Leif Adamec Rydenfalk · © 2026</span><a href="https://github.com/ce-net/ce-net.github.io">This page on GitHub</a><a href="https://ce-net.github.io/demos/">Demos</a><a href="https://github.com/ce-net/starters">Starter packs</a><a href="https://ce-net.com/">ce-net.com</a></footer>
+</div>
+<script>
+(function(){var b=document.getElementById("tog"),r=document.documentElement;
+function set(){b.textContent=r.dataset.theme==="light"?"Dark":"Light"}set();
+b.addEventListener("click",function(){var l=r.dataset.theme!=="light";if(l)r.dataset.theme="light";else delete r.dataset.theme;
+try{localStorage.setItem("ce-theme",l?"light":"dark")}catch(e){}set()})})();
+// counts from the live demos index
+fetch("https://ce-net.github.io/demos/demos.json").then(function(r){return r.json()}).then(function(d){
+  var a=d.demos||[],w=a.filter(function(x){return x.status==="works"}).length;
+  if(!a.length)return;
+  document.getElementById("n-all").textContent=a.length;
+  document.getElementById("n-works").textContent=w+" reproduce the numbers in their README";
+  document.getElementById("n-partly").textContent=(a.length-w)+", each note says what is missing";
+}).catch(function(){});
+</script>
+</body></html>
