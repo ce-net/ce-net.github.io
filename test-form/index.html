@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ce-net test form</title>
+<meta name="description" content="ce-net's own public test form for its browser agent (web.act). Nothing typed here is stored or sent anywhere.">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#070807">
+<link rel="icon" href="https://design.ce-net.com/v1/logo/ce-net-favicon-dark.svg" type="image/svg+xml">
+<script>try{if(localStorage.getItem("ce-theme")==="light")document.documentElement.dataset.theme="light"}catch(e){}</script>
+<link rel="stylesheet" href="../tokens.css"><link rel="stylesheet" href="../components.css">
+<style>
+.wrap{max-width:40rem;margin:0 auto;padding:var(--s-6) var(--m) var(--s-8)}
+.brand{font:400 13px var(--disp);letter-spacing:.08em;text-transform:uppercase;color:var(--ink);text-decoration:none}
+.lede{color:var(--ink-2);margin:var(--s-3) 0 var(--s-5)}
+form{display:grid;gap:var(--s-3);padding:var(--s-4)}
+label{display:grid;gap:6px;font:500 10.5px var(--mono);letter-spacing:.08em;text-transform:uppercase;color:var(--ink-2)}
+input,textarea{font:400 15px var(--sans);color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:var(--r-sm);padding:10px 12px;min-height:44px}
+textarea{min-height:88px;resize:vertical}
+button{justify-self:start;min-height:44px;padding:0 18px;font:500 11px var(--mono);letter-spacing:.08em;text-transform:uppercase;
+  color:var(--bg);background:var(--acc);border:0;border-radius:var(--r-sm);cursor:pointer}
+.note{font:400 12px/1.6 var(--mono);color:var(--ink-3);margin-top:var(--s-4)}
+</style>
+</head><body>
+<main class="wrap">
+  <a class="brand" href="../">ce-net</a>
+  <h1 class="display">Test form</h1>
+  <p class="lede">Our own form for testing our browser agent, web.act. An agent or a person fills it in and presses Send; the next page shows back what arrived, with a receipt code.</p>
+  <form class="glass card" method="get" action="done.html" id="form">
+    <label for="name">Name<input id="name" name="name" autocomplete="name" required></label>
+    <label for="mail">Mail<input id="mail" name="mail" type="email" autocomplete="email" required></label>
+    <label for="company">Company<input id="company" name="company" autocomplete="organization"></label>
+    <label for="message">Message<textarea id="message" name="message"></textarea></label>
+    <button id="send" type="submit">Send</button>
+  </form>
+  <p class="note">Nothing you type here is stored or sent anywhere: the form only passes it to the next page in its address, and that page shows it back to you. Assistants may fill in and send this form.</p>
+</main>
+</body></html>

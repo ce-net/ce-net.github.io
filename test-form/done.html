@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Test form received</title>
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#070807">
+<link rel="icon" href="https://design.ce-net.com/v1/logo/ce-net-favicon-dark.svg" type="image/svg+xml">
+<script>try{if(localStorage.getItem("ce-theme")==="light")document.documentElement.dataset.theme="light"}catch(e){}</script>
+<link rel="stylesheet" href="../tokens.css"><link rel="stylesheet" href="../components.css">
+<style>
+.wrap{max-width:40rem;margin:0 auto;padding:var(--s-6) var(--m) var(--s-8)}
+.brand{font:400 13px var(--disp);letter-spacing:.08em;text-transform:uppercase;color:var(--ink);text-decoration:none}
+.rows{padding:var(--s-2) var(--s-4)}
+.row{display:flex;justify-content:space-between;gap:var(--s-4);padding:10px 0;border-bottom:1px solid var(--line)}
+.row:last-child{border-bottom:0}
+.k{font:500 9.5px var(--sans);letter-spacing:.12em;text-transform:uppercase;color:var(--ink-2)}
+.v{font:400 13px/1.5 var(--mono);color:var(--ink);text-align:right;overflow-wrap:anywhere}
+.note{font:400 12px/1.6 var(--mono);color:var(--ink-3);margin-top:var(--s-4)}
+a.go{color:var(--acc)}
+</style>
+</head><body>
+<main class="wrap">
+  <a class="brand" href="../">ce-net</a>
+  <h1 class="display" id="h">Received</h1>
+  <section class="glass card rows" id="rows"></section>
+  <p class="note">Shown from this page's address only; nothing was stored or sent. <a class="go" href="./">Back to the form</a></p>
+</main>
+<script>
+(function () {
+  var q = new URLSearchParams(location.search), rows = document.getElementById("rows"), keys = ["name", "mail", "company", "message"];
+  function row(k, v) {
+    var d = document.createElement("div"); d.className = "row";
+    var a = document.createElement("span"); a.className = "k"; a.textContent = k;
+    var b = document.createElement("span"); b.className = "v"; b.textContent = v || "(empty)";
+    d.appendChild(a); d.appendChild(b); rows.appendChild(d);
+  }
+  if (!q.get("name") || !q.get("mail")) { document.getElementById("h").textContent = "Nothing received"; row("why", "name and mail are needed"); return; }
+  var s = keys.map(function (k) { return k + "=" + (q.get(k) || ""); }).join("&"), h = 2166136261;
+  for (var i = 0; i < s.length; i++) { h ^= s.charCodeAt(i); h = Math.imul(h, 16777619) >>> 0; }
+  row("receipt", "TF-" + ("00000000" + h.toString(16)).slice(-8).toUpperCase());
+  keys.forEach(function (k) { row(k, q.get(k)); });
+})();
+</script>
+</body></html>
